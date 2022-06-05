@@ -8,6 +8,7 @@
 </head>
 <body>
     <div id="test"></div>
+    <a id="test2">Link</a>
 
     <script>
         fetch('https://sheets.teamomarca.com/16DIitN83QL-DyX2vWRUomE51EJ7VHURUZBWsWeykfJI/Sheet1')
@@ -15,6 +16,8 @@
             .then(data => {
                 console.log(data);
                 document.getElementById('test').innerHTML = data[0].Nombre;
+                var a = document.getElementById('test2');
+                a.href = data[16].Valor;
             });
     </script>
 </body>
