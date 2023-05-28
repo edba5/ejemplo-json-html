@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test"></div>
+    <div id="2test"></div>
+    <div id="3test"></div>
+    <div id="4test"></div>
+    <a id="test2">Link</a>
+    <img id="test3" src="http://drive.google.com/uc?export=view&id=1Un3Ewx_xizdvjWXaGrLckgQEYPjG7ENQ" alt="perfil">
+
+    <script>
+        fetch('https://cms.edgarte.com/json/')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                document.getElementById('test').innerHTML = data[0].Title;
+                document.getElementById('2test').innerHTML = data[0].icon;
+                document.getElementById('3test').innerHTML = data[0].Title;
+                document.getElementById('4test').innerHTML = data[0].Title;
+                var a = document.getElementById('test2');
+                a.href = data[16].Valor;
+            });
+    </script>
+</body>
+
+</html>
