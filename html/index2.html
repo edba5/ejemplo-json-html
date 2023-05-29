@@ -5,12 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document 1</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      #links a {
+        background: white;
+        border: 1px solid white;
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: ease-in-out 0.2s;
+      }
+
+      #links a:hover {
+        background: none;
+        color: white;
+      }
+
+      #social a {
+        height: 32px;
+        width: 32px;
+        margin: 0 1rem;
+      }
+
+      #social a:hover {
+        height: 36px;
+        width: 36px;
+        transition: ease-in-out 0.2s;
+      }
+    
+body {
+  background-image: url('https://raw.githubusercontent.com/JLowe-N/CF-Workers-Linktree/master/img/dream-holidays-1511-1024.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#social #links a {
+  position: relative;
+}
+
+#social #links a svg {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+@media (max-width: 500px) {
+  #social #links a {
+    height: reset;
+    width: reset;
+    margin: 0 0.25rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+</style>
 </head>
 <body>
     <div id="test"></div>
-    <div id="2test"></div>
-    <div id="3test"></div>
-    <div id="4test"></div>
     <a id="test2">Link</a>
     <img id="test3" src="http://drive.google.com/uc?export=view&id=1Un3Ewx_xizdvjWXaGrLckgQEYPjG7ENQ" alt="perfil">
 
